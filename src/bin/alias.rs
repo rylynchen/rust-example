@@ -8,12 +8,8 @@ type Operations = VeryVerboseEnumOfThingsToDoWithNumbers;
 impl Operations {
     fn run(&self, x: i32, y: i32) -> i32 {
         match self {
-            Self::Add => {
-                x + y
-            }
-            Self::Subtract => {
-                x - y
-            }
+            Self::Add => x + y,
+            Self::Subtract => x - y,
         }
     }
 }

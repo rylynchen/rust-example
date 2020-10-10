@@ -18,7 +18,7 @@ struct Point {
 fn main() {
     let name = "Peter";
     let age = 27;
-    let peter = Person{name, age};
+    let peter = Person { name, age };
 
     println!("{:?}", peter);
 }

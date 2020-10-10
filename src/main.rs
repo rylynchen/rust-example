@@ -3,13 +3,12 @@ use std::fmt;
 use std::fmt::{Display, Formatter};
 
 fn main() {
-    let num = vec![1,1,2,2,3];
+    let num = vec![1, 1, 2, 2, 3];
     println!("{0}, this is {1}. {1}, this is {0}", "Alice", "Bob");
 
     println!("{:b}", 12);
 
     println!("{number:>0width$}", number = 1, width = 6);
-
 
     #[derive(Debug)]
     struct Structure(i32);

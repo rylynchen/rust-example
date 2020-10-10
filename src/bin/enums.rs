@@ -3,7 +3,7 @@ enum WebEvent {
     PageUnload,
     KeyPress(char),
     Paste(String),
-    Click{x:i64, y: i64},
+    Click { x: i64, y: i64 },
 }
 
 fn inspect(event: WebEvent) {
@@ -14,14 +14,14 @@ fn inspect(event: WebEvent) {
         WebEvent::Paste(s) => println!("pasted \"{}\".", s),
         WebEvent::Click { x, y } => {
             println!("clicked at x={}, y={}", x, y);
-        },
+        }
     }
 }
 
 fn main() {
     let pressed = WebEvent::KeyPress('x');
     let pasted = WebEvent::Paste("my text".to_string());
-    let click = WebEvent::Click {x:20, y:80};
+    let click = WebEvent::Click { x: 20, y: 80 };
     let load = WebEvent::PageLoad;
     let unload = WebEvent::PageUnload;
     inspect(pressed);
